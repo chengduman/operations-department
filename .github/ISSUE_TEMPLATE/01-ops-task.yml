@@ -1,0 +1,50 @@
+# 项目/运营任务
+name: 📋 运营任务/项目立项
+description: 项目立项、排期、流程管理等运营事务
+title: "[运营] "
+labels: ["运营任务"]
+assignees: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 任务类型
+      options:
+        - 项目立项
+        - 进度跟踪/催办
+        - 流程优化建议
+        - 客户对接安排
+        - 制度修订
+        - 会议纪要/工作记录
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 任务描述
+      placeholder: 清晰描述任务内容、背景和预期结果
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: 截止日期
+      placeholder: YYYY-MM-DD
+  - type: dropdown
+    id: assign
+    attributes:
+      label: 指派给
+      options:
+        - 徐明辉（部长分配）
+        - 高晓宇（运营专员-客户/交付）
+        - 何思雅（运营专员-制度/流程）
+        - 曹一鸣（运营专员-行政/数据）
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - 🔴 P0 - 紧急
+        - 🟡 P1 - 重要
+        - 🟢 P2 - 常规
